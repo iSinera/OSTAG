@@ -6,24 +6,24 @@ system.runInterval(() =>{
       if(tag.startsWith("os:")) player.removeTag(tag)
     });
     if (player.clientSystemInfo.platformType == 'Console') {
-      player.nameTag = player.name + "\n" + "Console";
       player.addTag('os:console');
-      player.runCommandAsync('title @s actionbar OS: Console');
+      player.nameTag = player.name + "\n" + "Console";
+      player.onScreenDisplay.setActionBar('OS: Console');
     }
     else if (player.clientSystemInfo.platformType == 'Desktop') {
-      player.nameTag = player.name + "\n" + "PC";
       player.addTag('os:pc');
-      player.runCommandAsync('title @s actionbar OS: PC');
+      player.nameTag = player.name + "\n" + "PC";
+      player.onScreenDisplay.setActionBar('OS: PC');
     }
     else if (player.clientSystemInfo.platformType == 'Mobile') {
-      player.nameTag = player.name + "\n" + "Mobile";
       player.addTag('os:mobile');
-      player.runCommandAsync('title @s actionbar OS: Mobile');
+      player.nameTag = player.name + "\n" + "Mobile";
+      player.onScreenDisplay.setActionBar('OS: Mobile');
     }
     else {
-      player.nameTag = player.name + "\n" + "Unkown";
       player.addTag('os:unkown');
-      player.runCommandAsync('title @s actionbar OS: unkown');
+      player.nameTag = player.name + "\n" + "Unkown";
+      player.onScreenDisplay.setActionBar('OS: Unkown');
     }
-  } 
+  }
 });
