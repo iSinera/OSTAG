@@ -25,6 +25,5 @@ system.runInterval(() =>{
       player.addTag('os:unkown');
       player.runCommandAsync('title @s actionbar OS: unkown');
     }
-  }
-  
+  } 
 });
