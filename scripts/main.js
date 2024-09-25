@@ -16,6 +16,5 @@ world.afterEvents.playerSpawn.subscribe((ev) =>{
     const tag = osList[platform];
     player.addTag(tag);
     player.nameTag = player.name + '\n' + tag.replace("os:", "");
-    player.onScreenDisplay.setActionBar(`OS: ${tag.replace("os:", "")}`);
   }
 });
