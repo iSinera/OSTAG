@@ -6,7 +6,7 @@ world.afterEvents.playerSpawn.subscribe((ev) =>{
     player.getTags().forEach((tag) => tag.startsWith("os:") && player.removeTag(tag));
 
     const platform = player.clientSystemInfo.platformType;
-    player.addTag(`os:${platform}`);
+    player.addTag(`os:${platform.replace("Desktop", "PC")}`);
     player.nameTag = player.name + '\n' + platform.replace("Desktop", "PC");
   }
 });
